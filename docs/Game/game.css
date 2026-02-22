@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'titlefont';
+    src: url('../Fonts/GtekTechnology-B9aB.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'regularfont';
+    src: url('../Fonts/VCR_OSD_MONO_1.001.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #050505;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#gameContainer {
+    position: relative;
+    padding: 40px;
+    background: #1a1a1a;
+    border-radius: 50px;
+    border: 10px solid #222;
+    box-shadow:
+            0 0 50px rgba(0,0,0,0.9),
+            inset 0 0 20px rgba(255,255,255,0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameCanvas {
+    max-width: 90vw;
+    max-height: 85vh;
+    display: block;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 15px;
+    border: 5px solid #000;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    z-index: 1;
+}
+
+#gameContainer::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    background: linear-gradient(
+            rgba(18, 16, 16, 0) 50%,
+            rgba(0, 0, 0, 0.1) 50%
+    ), linear-gradient(
+            90deg,
+            rgba(255, 0, 0, 0.02),
+            rgba(0, 255, 0, 0.01),
+            rgba(0, 0, 118, 0.02)
+    );
+    background-size: 100% 4px, 3px 100%;
+    pointer-events: none;
+    z-index: 2;
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #1a1a1a; }
+::-webkit-scrollbar-thumb { background: #444; border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: #00ffea; }
+
+#backToMenu {
+    background: #333333;
+    color: #888888;
+    border: 1px solid #555555;
+    padding: 5px 15px;
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-left: 20px;
+    cursor: pointer;
+    font-family: 'regularfont', sans-serif;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+#backToMenu:hover {
+    background: #444444;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgb(0, 255, 234);
+}
+
+#unity-footer
+{
+    font-family: 'regularfont', sans-serif;
+    color: white;
+    background-color: #444444;
+    height: 39px;
+}
+
+#unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: titlefont; font-size: 18px }
+
+@media (max-aspect-ratio: 16/9) {
+    #gameCanvas {
+        height: 100vh;
+        width: auto;
+    }
+}
+
+@media (min-aspect-ratio: 16/9) {
+    #gameCanvas {
+        width: 100vw;
+        height: auto;
+    }
+}

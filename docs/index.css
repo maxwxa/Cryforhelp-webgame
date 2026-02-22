@@ -1,12 +1,12 @@
 
 @font-face {
     font-family: 'titlefont';
-    src: url('fonts/GtekTechnology-B9aB.ttf') format('truetype');
+    src: url('Fonts/GtekTechnology-B9aB.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'regularfont';
-    src: url('fonts/VCR_OSD_MONO_1.001.ttf') format('truetype');
+    src: url('Fonts/VCR_OSD_MONO_1.001.ttf') format('truetype');
 }
 
 * {
@@ -17,7 +17,7 @@
 
 body {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('Gamemenu.png');
+    url('Assets/Gamemenu.png');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
