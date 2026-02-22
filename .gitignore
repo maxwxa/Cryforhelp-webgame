@@ -1,0 +1,24 @@
+# --- Unity Folders to Ignore ---
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Mm]emoryCaptures/
+/[Uu]serSettings/
+
+# --- Asset Store Packages ---
+/[Aa]ssets/AssetStoreTools*
+
+# --- IDE/Operating System Files ---
+.vs/
+.vscode/
+.DS_Store
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.bak
