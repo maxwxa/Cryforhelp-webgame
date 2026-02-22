@@ -28,7 +28,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #888888;
     overflow-x: hidden;
     margin: 0;
 }
